@@ -1,102 +1,122 @@
-# 🌤️ Cinematic Weather Dashboard
+# Cinematic Weather Dashboard
 
-A modern, visually immersive weather application built with React and Vite. Experience weather like never before with dynamic backgrounds, glassmorphism design, and smooth animations that adapt to real-time conditions.
+[![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=flat-square&logo=react)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-7.3.1-646CFF?style=flat-square&logo=vite)](https://vitejs.dev)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript)](https://www.javascript.com)
+[![Weather API](https://img.shields.io/badge/Weather%20API-Weatherstack-blue?style=flat-square)](https://weatherstack.com)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Available-brightgreen?style=flat-square)](https://weather-app-demo.vercel.app)
 
-**Live Demo**: [Add your deployed link here]
-
----
-
-## ✨ Features
-
-### 🎨 Visual Design
-- **Cinematic Full-Screen UI** - Immersive weather dashboard with dynamic backgrounds
-- **Glassmorphism Design** - Modern frosted glass containers with backdrop blur effects
-- **Weather-Based Backgrounds** - Automatic background changes based on current conditions (sunny, rainy, cloudy, night, snowy)
-- **Smooth Animations** - Staggered fade-ins, floating icons, and interactive hover effects
-- **Responsive Layout** - Fully mobile-optimized with adaptive design
-
-### 🌡️ Weather Features
-- **Real-Time Weather Data** - Fetch current weather using Weatherstack API
-- **Current Weather Display** - Large temperature display, weather description, and condition icon
-- **Hourly Timeline** - 24-hour forecast with smooth horizontal scrolling
-- **7-Day Forecast** - Weekly weather prediction with max/min temperatures
-- **Weather Metrics** - Humidity, wind speed, and cloud coverage
-- **Current Hour Highlight** - Automatically marks the current hour in the timeline
-
-### ⚡ User Experience
-- **City Search** - Smooth search functionality with Enter key support
-- **Loading Indicator** - Animated spinner during data fetch
-- **Error Handling** - Graceful error messages for failed requests
-- **Optimized Performance** - Efficient rendering and smooth transitions
-- **No External UI Libraries** - Pure CSS with custom animations
+A modern, immersive weather application featuring a full-screen cinematic interface with glassmorphism design, dynamic backgrounds, and smooth animations. Built with React and Vite for exceptional performance and user experience.
 
 ---
 
-## 🛠️ Tech Stack
+## Screenshots
 
-- **Frontend Framework**: React 19.2.0
-- **Build Tool**: Vite 7.3.1
-- **Styling**: Pure CSS (Glassmorphism + Custom Animations)
-- **Weather API**: Weatherstack
-- **Package Manager**: npm
-- **Version Control**: Git & GitHub
+### Search Screen
+![Search Screen](./screenshots/search-screen.png)
 
----
-
-## 📸 Screenshots
-
-Add screenshots of your weather dashboard here:
-
-```
-![Dashboard Search](./screenshots/search.png)
-![Weather Display](./screenshots/weather.png)
-![Forecast Timeline](./screenshots/forecast.png)
-```
-
-**Note**: Create a `screenshots` folder in your project root and add images for documentation.
+### Weather Dashboard
+![Weather Dashboard](./screenshots/dashboard-view.png)
 
 ---
 
-## 🚀 Installation & Setup
+## Features
+
+### Visual Experience
+- **Full-Screen Cinematic Layout** – Immersive weather dashboard that fills the entire viewport
+- **Glassmorphism Design** – Modern frosted glass UI components with backdrop blur effects
+- **Weather-Based Backgrounds** – Dynamic backgrounds that change based on conditions (sunny, rainy, cloudy, night, snowy)
+- **Smooth Animations** – Staggered transitions, floating icons, and interactive hover effects
+- **Responsive Design** – Optimized for desktop, tablet, and mobile devices
+
+### Weather Functionality
+- **Real-Time Weather Data** – Fetches current conditions from Weatherstack API
+- **Current Weather Display** – Large temperature display with weather icon and description
+- **Hourly Timeline** – 24-hour forecast with horizontal scrolling and current hour highlight
+- **7-Day Forecast** – Weekly weather predictions with max/min temperatures
+- **Weather Metrics** – Humidity, wind speed, and cloud coverage indicators
+- **Error Handling** – Graceful error messages for invalid cities or API failures
+
+### User Experience
+- **City Search** – Intuitive search bar with Enter key support
+- **Loading States** – Animated spinner during data fetching
+- **No External UI Libraries** – Pure CSS with optimized animations
+- **Smooth Transitions** – 0.3-0.8s easing functions for all interactions
+- **Performance Optimized** – Efficient rendering and minimal repaints
+
+---
+
+## Tech Stack
+
+- **Framework:** React 19.2.0
+- **Build Tool:** Vite 7.3.1
+- **Styling:** CSS3 (Glassmorphism, Animations, Responsive Grid)
+- **API:** Weatherstack Free Tier
+- **Language:** JavaScript (ES6+)
+- **Package Manager:** npm
+- **Version Control:** Git
+
+---
+
+## Installation
 
 ### Prerequisites
 - Node.js 16+ and npm installed
-- Weatherstack API key (free tier available)
+- Weatherstack API key ([Sign up for free](https://weatherstack.com))
 
-### Step 1: Clone Repository
-```bash
-git clone https://github.com/yourusername/weather-app.git
-cd weather-app
-```
+### Steps
 
-### Step 2: Install Dependencies
-```bash
-npm install
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/akshay-shastri/weather-app.git
+   cd weather-app
+   ```
 
-### Step 3: Set Up Environment Variables
-Create a `.env` file in the project root:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-```env
-VITE_WEATHER_API_KEY=your_weatherstack_api_key_here
-```
+3. **Set up environment variables**
+   
+   Create a `.env` file in the project root:
+   ```env
+   VITE_WEATHER_API_KEY=your_weatherstack_api_key_here
+   ```
+   
+   > **Note:** Do not commit the `.env` file to version control. It is included in `.gitignore` by default.
 
-**How to get your API Key:**
-1. Visit [Weatherstack](https://weatherstack.com/)
-2. Sign up for a free account
-3. Navigate to your dashboard and copy your API key
-4. Paste it in the `.env` file
-
-### Step 4: Run Development Server
-```bash
-npm run dev
-```
-
-The app will launch at `http://localhost:5173`
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   
+   Visit `http://localhost:5173` in your browser.
 
 ---
 
-## 📦 Project Structure
+## Build & Deployment
+
+### Local Build
+```bash
+npm run build
+npm run preview
+```
+
+### Deploy on Vercel
+
+1. Push your repository to GitHub
+2. Visit [Vercel](https://vercel.com) and sign in
+3. Click "Add New Project" and select your repository
+4. In the project settings, add environment variables:
+   - **Name:** `VITE_WEATHER_API_KEY`
+   - **Value:** Your Weatherstack API key
+5. Click "Deploy" – your app will be live in seconds
+
+---
+
+## Project Structure
 
 ```
 weather-app/
@@ -117,7 +137,6 @@ weather-app/
 │   ├── main.jsx
 │   └── index.css
 ├── public/
-├── .env
 ├── .gitignore
 ├── package.json
 ├── vite.config.js
@@ -127,160 +146,107 @@ weather-app/
 
 ---
 
-## 🔧 Available Scripts
+## Available Scripts
 
 ### Development
 ```bash
 npm run dev
 ```
-Starts the development server with hot module reloading.
+Starts the Vite development server with hot module reloading.
 
-### Build for Production
+### Production Build
 ```bash
 npm run build
 ```
-Creates an optimized production build in the `dist` folder.
+Creates an optimized production bundle in the `dist` folder.
 
-### Preview Production Build
+### Preview Build
 ```bash
 npm run preview
 ```
 Serves the production build locally for testing.
 
-### Lint Code
+### Linting
 ```bash
 npm run lint
 ```
-Runs ESLint to check code quality.
+Runs ESLint to check code quality and consistency.
 
 ---
 
-## 🌐 Deployment
-
-### Deploy on Vercel
-
-1. **Push to GitHub**
-   ```bash
-   git push origin main
-   ```
-
-2. **Import Project on Vercel**
-   - Visit [Vercel](https://vercel.com)
-   - Click "New Project"
-   - Select your GitHub repository
-   - Click "Import"
-
-3. **Add Environment Variables**
-   - In Vercel dashboard, go to "Settings" → "Environment Variables"
-   - Add: `VITE_WEATHER_API_KEY` with your API key
-   - Click "Save"
-
-4. **Deploy**
-   - Vercel automatically deploys on push
-   - Your app is live! 🎉
-
-### Deploy on Netlify
-
-1. **Connect Repository**
-   - Visit [Netlify](https://netlify.com)
-   - Click "New site from Git"
-   - Select GitHub and authorize
-
-2. **Build Settings**
-   - Build Command: `npm run build`
-   - Publish Directory: `dist`
-
-3. **Environment Variables**
-   - Go to "Site Settings" → "Build & Deploy" → "Environment"
-   - Add: `VITE_WEATHER_API_KEY=your_key`
-   - Trigger a new deploy
-
----
-
-## 🎯 Usage
+## Usage
 
 1. **Search for a City**
-   - Type a city name in the search box
-   - Press Enter or click search
-   - Weather dashboard loads with animations
+   - Enter a city name in the search bar
+   - Press Enter to fetch weather data
+   - Dashboard loads with smooth animations
 
 2. **View Current Weather**
    - Large temperature display in the center
    - Weather icon and description
-   - Additional metrics (humidity, wind, clouds)
+   - Humidity, wind speed, and cloud metrics
 
 3. **Check Hourly Forecast**
-   - Scroll through 24 hours of weather
-   - Current hour highlighted with glow effect
-   - Hover for interactive effects
+   - Scroll horizontally through 24 hours
+   - Current hour is highlighted with a glow effect
+   - Hover effects on each hour card
 
 4. **View Weekly Forecast**
-   - Scroll through 7-day forecast
-   - Today's card highlighted
-   - Click for interactive feedback
+   - Scroll through 7-day predictions
+   - Today's card is highlighted
+   - See max and min temperatures for each day
 
 ---
 
-## 🚀 Future Improvements
+## Future Enhancements
 
-- [ ] **Dark Mode** - Toggle between light and dark themes
-- [ ] **Geolocation** - Auto-detect user location on first load
-- [ ] **Weather Animations** - Animated rain, snow, and cloud effects
-- [ ] **PWA Support** - Install as progressive web app
-- [ ] **Units Toggle** - Switch between Celsius and Fahrenheit
-- [ ] **Recent Searches** - Save and quick-access previous searches
-- [ ] **Extended Forecast** - 30-day weather prediction
-- [ ] **Weather Alerts** - Notifications for severe weather
-- [ ] **Map Integration** - Interactive weather map
-- [ ] **Multiple Locations** - Compare weather across cities
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- [ ] Dark mode toggle
+- [ ] Geolocation-based weather
+- [ ] Animated weather effects (rain, snow, clouds)
+- [ ] Progressive Web App (PWA) support
+- [ ] Celsius/Fahrenheit unit toggle
+- [ ] Recent search history
+- [ ] Extended 30-day forecast
+- [ ] Weather alerts and notifications
+- [ ] Interactive weather map
+- [ ] Multiple location tracking
 
 ---
 
-## 📝 License
+## Troubleshooting
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+**Issue:** "Invalid API key" error
+- Verify your Weatherstack API key is correct
+- Check that `.env` file contains `VITE_WEATHER_API_KEY`
+- Restart development server after updating `.env`
 
----
+**Issue:** App not loading
+- Clear browser cache (Ctrl+Shift+Delete)
+- Ensure Node.js version is 16 or higher: `node --version`
+- Delete `node_modules` and reinstall: `npm install`
 
-## 🐛 Reported Issues & Bug Fixes
-
-If you encounter any issues:
-
-1. Check if the `.env` file is properly configured
-2. Verify your Weatherstack API key is valid
-3. Ensure Node.js version is 16 or higher
-4. Clear browser cache and hard refresh
-5. Open an issue on GitHub with detailed description
-
----
-
-## 📞 Contact & Support
-
-- **Author**: Your Name
-- **Email**: your.email@example.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **Portfolio**: [yourportfolio.com](https://yourportfolio.com)
+**Issue:** Styles not applying
+- Clear browser cache and hard refresh (Ctrl+Shift+R)
+- Restart development server
 
 ---
 
-## 🙏 Acknowledgments
+## License
 
-- **Weatherstack API** - For reliable weather data
-- **Unsplash** - For beautiful background images
-- **React & Vite Teams** - For amazing tools and documentation
+This project is licensed under the MIT License – see [LICENSE](LICENSE) file for details.
 
 ---
 
-**Made with ❤️ by [Your Name]**
+## Author
+
+**Akshay Shastri**  
+GitHub: [@akshay-shastri](https://github.com/akshay-shastri)
+
+---
+
+## Acknowledgments
+
+- [Weatherstack](https://weatherstack.com) – Reliable weather data API
+- [Unsplash](https://unsplash.com) – Beautiful background images
+- [React](https://react.dev) – JavaScript library for UI
+- [Vite](https://vitejs.dev) – Next-generation build tool
