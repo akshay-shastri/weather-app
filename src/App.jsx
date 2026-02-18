@@ -59,10 +59,10 @@ function App() {
   }
 
   return (
-    <div className={`app ${getWeatherCondition()}`} style={!weather ? { backgroundImage: `url(${searchBg})` } : {}}>
+    <div className={`app ${getWeatherCondition()} ${weather ? 'weather-loaded' : ''}`} style={!weather ? { backgroundImage: `url(${searchBg})` } : {}}>
       <div className="overlay"></div>
       
-      <div className="content">
+      <div className={`content ${weather ? 'weather-content' : ''}`}>
         <SearchBar onSearch={fetchWeather} loading={loading} />
         
         {error && <div className="error-message">{error}</div>}
@@ -75,11 +75,17 @@ function App() {
         )}
         
         {weather && !loading && (
-          <>
-            <HourlyTimeline weather={weather} />
-            <CurrentWeather weather={weather} />
-            <ForecastStrip weather={weather} />
-          </>
+          <div className="weather-dashboard">
+            <div className="hourly-section">
+              <HourlyTimeline weather={weather} />
+            </div>
+            <div className="current-section">
+              <CurrentWeather weather={weather} />
+            </div>
+            <div className="forecast-section">
+              <ForecastStrip weather={weather} />
+            </div>
+          </div>
         )}
       </div>
     </div>
