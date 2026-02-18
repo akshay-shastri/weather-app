@@ -1,0 +1,81 @@
+.hourly-timeline {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 1200px;
+  animation: slideIn 0.5s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.hourly-timeline::-webkit-scrollbar {
+  height: 6px;
+}
+
+.hourly-timeline::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hourly-timeline::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.hour-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  min-width: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hour-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+}
+
+.hour-item.current {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.hour-time {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.hour-temp {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hourly-timeline {
+    gap: 10px;
+  }
+  
+  .hour-item {
+    min-width: 70px;
+    padding: 12px 15px;
+  }
+}

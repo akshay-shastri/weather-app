@@ -1,0 +1,104 @@
+.forecast-strip {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 1200px;
+  animation: slideUp 0.6s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.forecast-strip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.forecast-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.forecast-strip::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.forecast-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 25px 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  min-width: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.forecast-card.today {
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.forecast-day {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.forecast-temps {
+  display: flex;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.max-temp {
+  font-weight: 600;
+}
+
+.min-temp {
+  opacity: 0.7;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .forecast-strip {
+    gap: 15px;
+  }
+  
+  .forecast-card {
+    min-width: 100px;
+    padding: 20px 25px;
+  }
+  
+  .forecast-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
